@@ -67,3 +67,10 @@ const categories = [
   'movies',
   'success'
 ];
+
+function getRandomCategory() {
+  const randomIndex = Math.floor(Math.random() * categories.length);
+  return categories[randomIndex];
+}
+
+let category = getRandomCategory();

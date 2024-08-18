@@ -97,6 +97,12 @@ const fetchQuote = (category) => {
     document.getElementById('quote').innerHTML = `"${quoteText}"<br><strong>- ${quoteAuthor}</strong>`;
   })
   .catch(error => {
+     Swal.fire({
+      title: 'Error!',
+      text: 'There was an issue fetching the quote. Please try again later.',
+      icon: 'error',
+      confirmButtonText: 'OK'
+    });
     console.error('There has been a problem with your fetch operation:', error);
   });
 }

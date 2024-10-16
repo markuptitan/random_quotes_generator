@@ -23,7 +23,6 @@ Whether you're looking for a quick motivational boost or simply enjoy interestin
 ## Technologies Used
 
 - **HTML**: Provides the basic structure of the web application, including the layout and content.
-  
 - **CSS**: Used for styling the application, including layout, colors, fonts, and responsive design. Utilizes rem and em units for a flexible and adaptive design.
 
 - **JavaScript**: Handles the dynamic aspects of the application, including fetching data from the API, updating the DOM, and managing user interactions.
@@ -52,20 +51,16 @@ To get started with the Random Quotes Generator and serve it locally using `npm 
    ```bash
    git clone https://github.com/yourusername/random_quotes_generator.git
    ```
+
 2. Navigate to the project directory:
    ```bash
    cd random_quotes_generator
    ```
-## Install Dependencies
-1. Install http-server globally using npm if you haven't already:
+3. Start the local server:
    ```bash
-   npm i -g http-server
+   npm run serve
    ```
-2. Start the local server:
-   ```bash
-   http-server .
-   ```
-3. By default, http-server will serve your files on http://localhost:8080. Open this URL in your web browser to view the application.
+4. By default, http-server will serve your files on http://localhost:3000. Open this URL in your web browser to view the application.
 
 ## Configuration
 
@@ -74,23 +69,26 @@ To get started with the Random Quotes Generator and serve it locally using `npm 
 The application fetches quotes from the [API-Ninjas Quotes API](https://api-ninjas.com/api/quotes). To use your own API key, follow these steps:
 
 1. **Obtain an API Key**:
+
    - Sign up on the [API-Ninjas website](https://api-ninjas.com) to get your API key if you haven't already.
 
 2. **Update the API Key in the Code**:
+
    - Open the `js/index.js` file in your code editor.
    - Locate the line where the `apiKey` variable is defined:
 
      ```javascript
-     const apiKey = 'YOUR_API_KEY';
+     const apiKey = "YOUR_API_KEY";
      ```
 
    - Replace `'YOUR_API_KEY'` with the API key you obtained from API-Ninjas:
 
      ```javascript
-     const apiKey = 'your_actual_api_key_here';
+     const apiKey = "your_actual_api_key_here";
      ```
 
 3. **Save the Changes**:
+
    - Save the changes to `js/index.js`.
 
 4. **Test the Configuration**:
@@ -101,36 +99,96 @@ The application fetches quotes from the [API-Ninjas Quotes API](https://api-ninj
 You can also customize the application by adjusting the following settings:
 
 1. **Categories**:
+
    - The list of categories from which quotes are selected is defined in the `categories` array in `js/index.js`.
    - Add or remove categories based on your preferences:
 
      ```javascript
      const categories = [
-       'age', 'alone', 'amazing', 'anger', 'architecture', 'art', 'attitude',
-       'beauty', 'best', 'birthday', 'business', 'car', 'change', 'communication',
-       'computers', 'cool', 'courage', 'dad', 'dating', 'death', 'design', 'dreams',
-       'education', 'environmental', 'equality', 'experience', 'failure', 'faith',
-       'family', 'famous', 'fear', 'fitness', 'food', 'forgiveness', 'freedom',
-       'friendship', 'funny', 'future', 'god', 'good', 'government', 'graduation',
-       'great', 'happiness', 'health', 'history', 'home', 'hope', 'humor',
-       'imagination', 'inspirational', 'intelligence', 'jealousy', 'knowledge',
-       'leadership', 'learning', 'legal', 'life', 'love', 'marriage', 'medical',
-       'men', 'mom', 'money', 'morning', 'movies', 'success'
+       "age",
+       "alone",
+       "amazing",
+       "anger",
+       "architecture",
+       "art",
+       "attitude",
+       "beauty",
+       "best",
+       "birthday",
+       "business",
+       "car",
+       "change",
+       "communication",
+       "computers",
+       "cool",
+       "courage",
+       "dad",
+       "dating",
+       "death",
+       "design",
+       "dreams",
+       "education",
+       "environmental",
+       "equality",
+       "experience",
+       "failure",
+       "faith",
+       "family",
+       "famous",
+       "fear",
+       "fitness",
+       "food",
+       "forgiveness",
+       "freedom",
+       "friendship",
+       "funny",
+       "future",
+       "god",
+       "good",
+       "government",
+       "graduation",
+       "great",
+       "happiness",
+       "health",
+       "history",
+       "home",
+       "hope",
+       "humor",
+       "imagination",
+       "inspirational",
+       "intelligence",
+       "jealousy",
+       "knowledge",
+       "leadership",
+       "learning",
+       "legal",
+       "life",
+       "love",
+       "marriage",
+       "medical",
+       "men",
+       "mom",
+       "money",
+       "morning",
+       "movies",
+       "success",
      ];
      ```
 
 2. **Styling**:
+
    - Modify the `css/styles.css` file to change the appearance of the application. Adjust styles like font size, colors, padding, and margins according to your design preferences.
 
 3. **Error Handling**:
+
    - The application uses [SweetAlert2](https://sweetalert2.github.io/) for error messages. Customize the alert styles and messages in `js/index.js`:
 
      ```javascript
      Swal.fire({
-       icon: 'error',
-       title: 'Oops...',
-       text: 'Something went wrong!',
-       footer: 'Please try again later.'
+       icon: "error",
+       title: "Oops...",
+       text: "Something went wrong!",
+       footer: "Please try again later.",
      });
      ```
 
@@ -139,17 +197,21 @@ By following these steps, you can configure and customize the Random Quotes Gene
 ## Usage
 
 1. **Load the Application**:
+
    - After setting up and starting the server with `http-server`, open your web browser and navigate to `http://localhost:8080` (or the URL provided by your server).
 
 2. **Generate Quotes**:
+
    - Click the "Generate quote" button to fetch and display a new random quote.
    - The application will display the quote and the author in the designated area on the page.
 
 3. **Explore Categories**:
+
    - The application fetches quotes from a random category each time you click the button.
    - You can customize the categories by modifying the `categories` array in the `js/index.js` file.
 
 4. **Handle Errors**:
+
    - If there are issues with fetching quotes or other errors, SweetAlert2 will display a user-friendly error message.
 
 5. **Refresh the Page**:

@@ -1,0 +1,22 @@
+{
+  "name": "random_quotes_generator",
+  "version": "1.0.0",
+  "description": "This is a random quotes generator that uses an API key from API Ninjas",
+  "main": "./index.html",
+  "scripts": {
+    "serve": "npx http-server . -p 3000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/markuptitan/random_quotes_generator.git"
+  },
+  "author": "Siyabonga Samson Lukhele",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/markuptitan/random_quotes_generator/issues"
+  },
+  "homepage": "https://github.com/markuptitan/random_quotes_generator#readme",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

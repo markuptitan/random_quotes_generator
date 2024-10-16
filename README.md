@@ -49,7 +49,7 @@ To get started with the Random Quotes Generator and serve it locally using `npm 
 1. Clone the repository to your local machine using Git:
 
    ```bash
-   git clone https://github.com/yourusername/random_quotes_generator.git
+   git clone https://github.com/markuptitan/random_quotes_generator.git
    ```
 
 2. Navigate to the project directory:

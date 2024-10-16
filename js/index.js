@@ -92,7 +92,8 @@ const fetchQuote = (category) => {
     })
     .then((data) => {
       console.log(data);
-      const { quoteText, quoteAuthor } = data;
+      const quoteText = data[0]?.quote || "No quote found";
+      const quoteAuthor = data[0]?.author || "Unknown author";
       document.getElementById(
         "quote"
       ).innerHTML = `"${quoteText}"<br><strong>- ${quoteAuthor}</strong>`;
